@@ -17,7 +17,10 @@ export default {
   		colors: {
   			darkGray: '#121212',
         textGray: '#C7C7C7',
-        buttonBrown: '#AE752C'
+        buttonBrown: '#AE752C',
+        dark:'#000000',
+        semiWhite:'#F5E8D8',
+        white:'#FFFFFF',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
