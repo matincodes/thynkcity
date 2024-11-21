@@ -1,15 +1,30 @@
 /** @type {import('tailwindcss').Config} */
+
+import tailwindcssAnimate from "tailwindcss-animate";
+
 export default {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        darkGray: "#121212"
-      }
-    },
+  	fontFamily: {
+  		mont: ["Montserrat", "sans-serif"],
+  		inter: ["Inter", "sans-serif"]
+  	},
+  	extend: {
+  		colors: {
+  			darkGray: '#121212',
+        textGray: '#C7C7C7',
+        buttonBrown: '#AE752C'
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
-  plugins: [],
+  plugins: [tailwindcssAnimate],
 }
