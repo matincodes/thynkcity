@@ -8,7 +8,7 @@ export const Route = createFileRoute("/(pages)/_contact/contact")({
 
 function RouteComponent() {
   return (
-    <div className="w-full flex-col flex items-center bg-dark">
+    <div className="w-full flex-col flex items-center h-auto bg-dark md:flex-row xl:items-start">
       <ContactInfo />
       <Form/>
     </div>

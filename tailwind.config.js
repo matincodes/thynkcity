@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 import tailwindcssAnimate from "tailwindcss-animate";
+import tailwindScrollbar from "tailwind-scrollbar";
 
 export default {
     darkMode: ["class"],
@@ -21,6 +22,7 @@ export default {
         dark:'#000000',
         semiWhite:'#F5E8D8',
         white:'#FFFFFF',
+		borderGray:'#717171',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -29,5 +31,6 @@ export default {
   		}
   	}
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [tailwindcssAnimate , tailwindScrollbar],
+  
 }
