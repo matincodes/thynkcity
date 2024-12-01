@@ -39,13 +39,12 @@ function FeaturedWorks() {
     if (!containerRef.current) return;
 
     const containerWidth = containerRef.current.offsetWidth;
-    const cardWidth = containerWidth / 2; // Dynamically calculate card width for desktop
-    const newIndex = Math.min(
-      currentIndex + 1,
-      featuredWorks.length - Math.ceil(containerWidth / cardWidth)
-    );
+    const cardWidth = containerWidth < 768 ? containerWidth : containerWidth / 2; // Full width for mobile, half for desktop
+    const maxIndex = featuredWorks.length - Math.ceil(containerWidth / cardWidth);
 
+    const newIndex = Math.min(currentIndex + 1, maxIndex);
     setCurrentIndex(newIndex);
+
     containerRef.current.scrollTo({
       left: newIndex * cardWidth,
       behavior: "smooth",
@@ -56,10 +55,11 @@ function FeaturedWorks() {
     if (!containerRef.current) return;
 
     const containerWidth = containerRef.current.offsetWidth;
-    const cardWidth = containerWidth / 2; // Dynamically calculate card width for desktop
-    const newIndex = Math.max(currentIndex - 1, 0);
+    const cardWidth = containerWidth < 768 ? containerWidth : containerWidth / 2; // Full width for mobile, half for desktop
 
+    const newIndex = Math.max(currentIndex - 1, 0);
     setCurrentIndex(newIndex);
+
     containerRef.current.scrollTo({
       left: newIndex * cardWidth,
       behavior: "smooth",
@@ -69,7 +69,7 @@ function FeaturedWorks() {
   return (
     <div className="mt-16 lg:pl-36 lg:mt-32 pl-5">
       <div className="flex justify-between items-center">
-        <h3 className="text-white font-semibold text-2xl pb-8 lg:text-[40px] lg:pb-14">
+        <h3 className="text-white font-mont font-semibold text-2xl pb-8 lg:text-[40px] lg:pb-14">
           Featured Works
         </h3>
         <Link to="">See more</Link>
@@ -80,7 +80,7 @@ function FeaturedWorks() {
           {featuredWorks.map((work, index) => (
             <div
               key={index}
-              className="lg:w-1/3 w-4/5 flex-shrink-0 flex flex-col items-center"
+              className="lg:w-1/3 w-full flex-shrink-0 flex flex-col items-center"
             >
               {/* Image Wrapper */}
               <div className="w-full rounded-xl lg:rounded-3xl overflow-hidden group">
