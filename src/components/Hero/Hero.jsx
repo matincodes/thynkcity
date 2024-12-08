@@ -9,18 +9,18 @@ import Futminna from "../../assets/images/futminna.svg"
 
 const images = [
     { src: GulfCoast, alt: "GulfCoast" },
-    { src: Binarify, alt: "Disney" },
-    { src: Africode, alt: "Airbnb" },
-    { src: Weeemake, alt: "Apple" },
-    { src: Futminna, alt: "Spark" },
+    { src: Binarify, alt: "Binarify" },
+    { src: Africode, alt: "Africode" },
+    { src: Weeemake, alt: "Weeemake" },
+    { src: Futminna, alt: "Futminna" },
   ];
 
 function Hero() {
   return (
     <div>
         <div className="flex flex-col lg:flex-row py-12 lg:pt-[92px] md:justify-center items-center">
-            <div className="lg:w-7/12 w-full mb-14 lg:mb-[185px] pl-6 pr-8 lg:pl-1 lg:-ml-4">
-                <h1 className="text-white text-3xl px-2 lg:text-[56px] lg:leading-tight lg:pb-4 font-mont font-semibold leading-10 pb-3">
+            <div className="lg:w-7/12 w-full mb-14 lg:mb-[185px] pl-6 pr-8 lg:pl-1">
+                <h1 className="text-white text-3xl lg:text-[56px] lg:leading-tight lg:pb-4 font-mont font-semibold leading-10 pb-3">
                     Empowering African Innovation Through Technology
                 </h1>
                 <p className="text-textGray font-inter text-sm lg:text-[20px] leading-6 lg:leading-8 lg:pr-48 lg:tracking-wider pb-3 lg:pb-8">
