@@ -1,103 +1,126 @@
-import { useEffect, useRef, useState } from "react";
+import arrow from "../../assets/icons/arrow-angle-2.svg";
+import thynkcityIcon from "../../assets/icons/thynkcity-icon.svg";
+import imageOne from "../../assets/images/card-image-one.svg";
+import imageTwo from "../../assets/images/card-image-two.svg";
+import imageThree from "../../assets/images/card-image-three.svg";
+import imageFour from "../../assets/images/card-image-four.svg";
+import imageFive from "../../assets/images/card-image-five.svg";
+import imageSix from "../../assets/images/card-image-six.svg";
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
+//
+//
 const cards = [
   {
     id: 1,
     title: "Kids' Tech Program",
     description:
       "We offer tech programs for kids, including Scratch, Python, Robotics, App Inventor, 3D Printing, and Game Development.",
-    color: "bg-orange-500",
-    logo: "https://via.placeholder.com/50",
+    color: "bg-[#CC5C33]",
+    image: imageOne,
   },
   {
     id: 2,
     title: "NeuraLearn Institute",
     description:
       "AI-powered learning platform offering courses in tech fields such as Frontend Development, Backend Development, Python, Robotics, and more.",
-    color: "bg-yellow-500",
-    logo: "https://via.placeholder.com/50",
+    color: "bg-[#D4992B]",
+    image: imageTwo,
   },
   {
     id: 3,
     title: "Weekend Nexus",
     description:
       "A 16-week intensive program for adults offering flexible, weekend virtual tech training tailored to fit busy schedules.",
-    color: "bg-purple-500",
-    logo: "https://via.placeholder.com/50",
+    color: "bg-[#A05CD6]",
+    image: imageThree,
   },
   {
     id: 4,
     title: "Talent AQ",
     description:
       "Connect with recruiters, showcase your skills, enhance your portfolio, and prepare for your dream job with focused training.",
-    color: "bg-green-500",
-    logo: "https://via.placeholder.com/50",
+    color: "bg-[#65AE2C]",
+    image: imageFour,
+  },
+  {
+    id: 5,
+    title: "Talent AQ",
+    description:
+      "Connect with recruiters, showcase your skills, enhance your portfolio, and prepare for your dream job with focused training.",
+    color: "bg-[#2C6675]",
+    image: imageFive,
+  },
+  {
+    id: 6,
+    title: "Talent AQ",
+    description:
+      "Connect with recruiters, showcase your skills, enhance your portfolio, and prepare for your dream job with focused training.",
+    color: "bg-[#D57F5D]",
+    image: imageSix,
   },
 ];
-
-const StackedCards = () => {
-  const containerRef = useRef(null);
-  const [fixedIndex, setFixedIndex] = useState(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-
-      const cards = Array.from(containerRef.current.children);
-
-      let fixed = -1;
-
-      cards.forEach((card, index) => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom > 0) {
-          fixed = index;
-        }
-      });
-
-      setFixedIndex(fixed);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+const Programs = () => {
   return (
-    <div>
-      {/* Content Before Cards */}
-      <div className="h-screen bg-gray-100 flex items-center justify-center">
-        <h1 className="text-3xl font-bold">Scroll Down to See the Cards</h1>
+    <div className="w-full h-auto flex flex-col gap-6 items-center mt-20 ">
+      <div className="w-[90%] lg:w-4/5">
+        <h1 className="font-semibold font-mont text-2xl  text-white">
+          Our programs
+        </h1>
       </div>
-
-      {/* Cards Section */}
-      <div ref={containerRef} className="relative h-auto">
-        {cards.map((card, index) => (
-          <div
-            key={card.id}
-            className={`w-[80%] mx-auto my-10 p-6 rounded-xl shadow-lg flex flex-col items-center ${
-              fixedIndex === index ? "fixed top-0 left-1/2 transform -translate-x-1/2 z-10" : ""
-            } ${card.color}`}
-            style={{ height: "50vh" }}
-          >
-            <img
-              src={card.logo}
-              alt={`${card.title} Logo`}
-              className="w-12 h-12 bg-white p-2 rounded-full mb-4"
-            />
-            <h2 className="text-white text-2xl font-bold">{card.title}</h2>
-            <p className="text-white mt-2 text-center">{card.description}</p>
-          </div>
+      {/* cards */}
+      <div className="h-auto w-[90%] lg:w-4/5 flex flex-col items-center gap-7 lg:gap-24 ">
+        {cards.map((items) => (
+          <Card
+            key={items.id}
+            title={items.title}
+            description={items.description}
+            color={items.color}
+            image={items.image}
+            nth={items.nth}
+          />
         ))}
-      </div>
-
-      {/* Content After Cards */}
-      <div className="h-screen bg-gray-200 flex items-center justify-center">
-        <h1 className="text-3xl font-bold">End of Cards</h1>
       </div>
     </div>
   );
 };
 
-export default StackedCards;
+export default Programs;
+const Card = ({ title, description, color, image }) => {
+  return (
+    <motion.div
+      transition={{ type: "spring", stiffness: 600 }}
+      className={` ${color} lg:h-72  sticky top-0 duration-300 ease-in-out w-full h-auto p-2 rounded-lg flex flex-col  md:flex-row-reverse items-center justify-between gap-[8px]`}
+    >
+      <img
+        src={image}
+        className=" w-[100%] md:w-[45%] h-auto md:h-full rounded-sm  "
+      />
+      <div className=" h-auto flex flex-col justify-between gap-8 md:h-full md:w-[45%] ">
+        <img className="w-6 h-6 lg:w-11 lg:h-11" src={thynkcityIcon} />
+        <div className=" h-auto flex flex-col gap-4 ">
+          <span>
+            <h1 className=" font-mont font-bold  text-base text-white  lg:text-3xl">
+              {title}
+            </h1>
+            <p className="font-inter font-normal text-xs text-white lg:text-lg">
+              {description}
+            </p>
+          </span>
+          <button className="w-28 h-7 lg:w-44 lg:h-10 rounded-3xl bg-[#F5DED6] flex items-center justify-between gap-2 pl-3 font-inter font-semibold text-xs lg:text-xl">
+            <span className="hover:underline">Learn more</span>{" "}
+            <img className="w-6 lg:w-10" src={arrow} />
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+Card.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  color: PropTypes.string,
+  image: PropTypes.string,
+};
