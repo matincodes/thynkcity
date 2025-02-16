@@ -64,11 +64,10 @@ const Testimonials = () => {
     <div className="mt-16 lg:pl-36 lg:mt-32 pl-5">
       <div className="flex justify-between items-center">
         <h3 className="text-white font-mont font-semibold text-2xl pb-8 lg:text-[40px] lg:pb-14">
-          Featured Works
+          Testimonials
         </h3>
       </div>
       <div className="w-full overflow-hidden" ref={containerRef}>
-        {/* Featured Works Row */}
         <div className="flex gap-8 lg:gap-16 transition-transform duration-500 ease-linear">
           {contents.map((items, index) => (
             <div

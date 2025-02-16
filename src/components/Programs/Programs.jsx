@@ -65,7 +65,7 @@ const Programs = () => {
   return (
     <div className="w-full h-auto flex flex-col gap-6 items-center mt-20 ">
       <div className="w-[90%] lg:w-4/5">
-        <h1 className="font-semibold font-mont text-2xl  text-white">
+        <h1 className="font-semibold font-mont lg:text-4xl text-2xl  text-white">
           Our programs
         </h1>
       </div>

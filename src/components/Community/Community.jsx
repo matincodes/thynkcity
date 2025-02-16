@@ -14,7 +14,7 @@ const Community = () => {
             skills, and collaborate on projects. Ready to be part of something
             big?
           </p>
-          <button className="w-40 h-9 rounded-3xl border-[1px] border-solid border-white font-inter font-semibold text-xs text-white">
+          <button className="hover:bg-buttonBrown hover:border-none w-40 h-9 rounded-3xl border-[1px] border-solid border-white font-inter font-semibold text-xs text-white">
             Join our community
           </button>
         </div>
