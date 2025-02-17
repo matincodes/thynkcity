@@ -7,7 +7,6 @@ import imageFour from "../../assets/images/card-image-four.svg";
 import imageFive from "../../assets/images/card-image-five.svg";
 import imageSix from "../../assets/images/card-image-six.svg";
 import PropTypes from "prop-types";
-import { motion } from "framer-motion";
 
 //
 //
@@ -89,9 +88,8 @@ const Programs = () => {
 export default Programs;
 const Card = ({ title, description, color, image }) => {
   return (
-    <motion.div
-      transition={{ type: "spring", stiffness: 600 }}
-      className={` ${color} lg:h-72  sticky top-0 duration-300 ease-in-out w-full h-auto p-2 rounded-lg flex flex-col  md:flex-row-reverse items-center justify-between gap-[8px]`}
+    <div
+      className={` ${color} lg:py-5 lg:px-5  sticky top-0 duration-300 ease-in-out w-full h-auto p-2 rounded-lg flex flex-col  md:flex-row-reverse items-center justify-between gap-[8px]`}
     >
       <img
         src={image}
@@ -104,7 +102,7 @@ const Card = ({ title, description, color, image }) => {
             <h1 className=" font-mont font-bold  text-base text-white  lg:text-3xl">
               {title}
             </h1>
-            <p className="font-inter font-normal text-xs text-white lg:text-lg">
+            <p className=" lg:w-[452px] font-inter font-normal text-xs text-white lg:text-lg">
               {description}
             </p>
           </span>
@@ -114,7 +112,7 @@ const Card = ({ title, description, color, image }) => {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

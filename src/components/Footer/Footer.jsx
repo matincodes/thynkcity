@@ -27,10 +27,10 @@ const Footer = () => {
                 company
               </h1>
               <ul className="flex flex-col gap-3  font-inter font-light text-xs leading-5 text-[#C7C7C7]">
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Blog</li>
-                <li>FAQs</li>
+                <li className="cursor-pointer">About Us</li>
+                <li className="cursor-pointer">Careers</li>
+                <li className="cursor-pointer">Blog</li>
+                <li className="cursor-pointer">FAQs</li>
               </ul>
             </div>
             <div className="flex flex-col gap-5">
@@ -38,12 +38,12 @@ const Footer = () => {
                 programs / products
               </h1>
               <ul className="flex flex-col gap-3  font-inter font-light text-xs leading-5 text-[#C7C7C7]">
-                <li>Kids &apos; Tech Programs</li>
-                <li>NeuraLearn Institute</li>
-                <li>Weekend Nexus</li>
-                <li>Talent AQ</li>
-                <li>Skill sprint</li>
-                <li>Pace Tech Academy</li>
+                <li className="cursor-pointer">Kids &apos; Tech Programs</li>
+                <li className="cursor-pointer">NeuraLearn Institute</li>
+                <li className="cursor-pointer">Weekend Nexus</li>
+                <li className="cursor-pointer">Talent AQ</li>
+                <li className="cursor-pointer">Skill sprint</li>
+                <li className="cursor-pointer">Pace Tech Academy</li>
               </ul>
             </div>
             <div className="flex flex-col gap-5">
@@ -51,14 +51,14 @@ const Footer = () => {
                 services
               </h1>
               <ul className="flex flex-col gap-3  font-inter font-light text-xs leading-5 text-[#C7C7C7]">
-                <li>Software Development</li>
-                <li>Project Management</li>
-                <li>Education and Training</li>
-                <li>Product Design</li>
-                <li>Robotics and AI Solution</li>
-                <li>Consulting Services</li>
-                <li>SEO and Digital marketing</li>
-                <li>Research and Development</li>
+                <li className="cursor-pointer">Software Development</li>
+                <li className="cursor-pointer">Project Management</li>
+                <li className="cursor-pointer">Education and Training</li>
+                <li className="cursor-pointer">Product Design</li>
+                <li className="cursor-pointer">Robotics and AI Solution</li>
+                <li className="cursor-pointer">Consulting Services</li>
+                <li className="cursor-pointer">SEO and Digital marketing</li>
+                <li className="cursor-pointer">Research and Development</li>
               </ul>
             </div>
             <div className="flex flex-col gap-5">
@@ -66,8 +66,8 @@ const Footer = () => {
                 contact us
               </h1>
               <ul className="flex flex-col gap-3 font-inter font-light text-xs leading-5 text-[#C7C7C7]">
-                <li>+234 902 523 0287</li>
-                <li>build@thynkcity.com</li>
+                <li >+234 902 523 0287</li>
+                <li className="cursor-pointer">build@thynkcity.com</li>
               </ul>
             </div>
           </div>
