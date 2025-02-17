@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // Define an array of service objects with title, description, and logo
 const content = [
   {
-    title: "SoftwareDevelopment",
+    title: "Software Development",
     description: "We craft stunning digital solutions tailored to your needs.",
   },
   {
@@ -31,7 +31,7 @@ const OurService = () => {
       <div className="w-11/12 lg:w-4/5 flex flex-col gap-6">
         {/* Section Title */}
         <h1 className="font-mont font-semibold lg:text-4xl text-2xl text-white">
-          Our services
+        Opportunities
         </h1>
         
         {/* Grid layout to display all services */}
@@ -60,10 +60,10 @@ const Card = ({title , description }) => {
       
       {/* Service title and description */}
       <span className="flex flex-col gap-2 w-full py-10">
-        <h1 className="lg:w-9/12 font-inter font-semibold text-base leading-4 text-white">
+        <h1 className="lg:w-9/12 lg:text-2xl font-inter font-semibold text-base leading-4 text-white">
           {title}
         </h1>
-        <p className="lg:w-9/12 font-inter font-normal text-xs leading-4 text-[#C7C7C7]">
+        <p className="lg:w-9/12 lg:text-sm font-inter font-normal text-xs leading-4 text-[#C7C7C7]">
           {description}
         </p>
       </span>

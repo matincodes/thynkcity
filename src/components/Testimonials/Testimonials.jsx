@@ -72,7 +72,7 @@ const Testimonials = () => {
           {contents.map((items, index) => (
             <div
               key={index}
-              className="lg:w-1/3  flex-shrink-0 flex  items-center "
+              className="md:w-1/3  flex-shrink-0 flex  items-center "
             >
               <Card description={items.description} name={items.name} />
             </div>
@@ -107,7 +107,7 @@ export default Testimonials;
 
 const Card = ({ description, name }) => {
   return (
-    <div className="w-60 lg:w-[435px] h-auto rounded-2xl px-6 py-7 flex flex-col gap-11 bg-[#121212]">
+    <div className="w-60 md:w-full h-auto rounded-2xl px-6 py-7 flex flex-col gap-11 bg-[#121212]">
       <h1 className="font-inter font-normal text-xl  text-[#C7C7C7]">
         {description}
       </h1>

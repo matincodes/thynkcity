@@ -16,19 +16,19 @@ const content = [
     image: idris,
     name: "Idris Muhammed",
     role: "Chief Operating Officer ",
-    mt: "mt-[-20px]",
+    mt: "md:mt-[-20px]",
   },
   {
     image: fawaz,
     name: "Fawaz  Adeniji",
     role: "Chief Technical Officer",
-    mt: "mt-[-35px]",
+    mt: "md:mt-[-35px]",
   },
   {
     image: barakah,
     name: "Barakah Alim",
     role: "Brand Strategist",
-    mt: "mt-[-20px]",
+    mt: "md:mt-[-20px]",
   },
   {
     image: divine,
@@ -42,7 +42,7 @@ const Lead = () => {
   return (
     <div className="w-full mt-20 flex justify-center">
       {/* Main container with responsive width */}
-      <div className="w-11/12 lg:w-4/5 lg:gap-20 h-auto flex flex-col gap-6">
+      <div className="w-11/12 lg:w-4/5 md:gap-20 h-auto flex flex-col gap-6">
         {/* Section title */}
         <h1 className="font-mont font-semibold lg:text-4xl text-2xl text-white">
           Meet the lead Thynkers
@@ -73,11 +73,11 @@ const Card = ({ image, name, role, mt }) => {
       {/* Profile image with rounded corners */}
       <img width="100%" className="rounded-xl" src={image} alt={name} />
       {/* Team member's name */}
-      <h1 className="font-mont font-medium text-sm leading-5 text-white">
+      <h1 className="lg:text-xl font-mont font-medium text-sm leading-5 text-white">
         {name}
       </h1>
       {/* Team member's role */}
-      <p className="font-inter font-normal text-xs leading-5 text-[#8E8E8E]">
+      <p className="lg:text-sm font-inter font-normal text-xs leading-5 text-[#8E8E8E]">
         {role}
       </p>
     </div>

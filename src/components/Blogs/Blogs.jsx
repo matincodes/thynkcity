@@ -70,8 +70,9 @@ const Blogs = () => {
   };
 
   return (
-    <div className="mt-16 lg:pl-36 lg:mt-32 pl-5">
-      <div className="flex justify-between items-center">
+    <div className="mt-16  lg:mt-32  flex lg:justify-center justify-end ">
+     <div className=" lg:w-4/5 w-[96%] ">
+     <div className="  flex justify-between items-center">
         <h3 className="text-white font-mont font-semibold text-2xl pb-8 lg:text-[40px] lg:pb-14">
           Blog
         </h3>
@@ -82,7 +83,7 @@ const Blogs = () => {
           {content.map((items, index) => (
             <div
               key={index}
-              className="lg:w-[27%] w-3/6  md:w-1/3  flex-shrink-0 flex  items-start "
+              className=" lg:flex-shrink w-5/12 flex-shrink-0 flex  items-start "
             >
               <Card description={items.description} title={items.title} image={items.image}/>
             </div>
@@ -91,7 +92,7 @@ const Blogs = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="lg:hidden flex justify-center space-x-8 py-8 lg:space-x-12 lg:-ml-24">
+      <div className=" lg:hidden flex justify-center space-x-8 py-8 lg:space-x-12 lg:-ml-24">
         <button
           onClick={handlePrev}
           className="bg-[#121212] rounded-full w-10 h-10 lg:w-16 lg:h-16 flex items-center justify-center shadow hover:bg-gray-600 transition"
@@ -109,6 +110,7 @@ const Blogs = () => {
           />
         </button>
       </div>
+     </div>
     </div>
   )
 };

@@ -80,11 +80,11 @@ const Footer = () => {
                 <p>All rights reserved.</p>
             </span>
             <ul className="grid grid-cols-3 gap-6 md:grid-cols-5 font-medium text-sm text-white">
-                <li className="flex items-center gap-2"> <img src={linkedIn}/> LinkedIn</li>
-                <li className="flex items-center gap-2"><img src={twitter}/> Twitter</li>
-                <li className="flex items-center gap-2"><img src={instagram}/> Instagram</li>
-                <li className="flex items-center gap-2"><img src={facebook}/> Facebook</li>
-                <li className="flex items-center gap-2"><img src={pinterest}/> Pinterest</li>
+                <li className="flex items-center gap-2 cursor-pointer"> <img src={linkedIn}/> LinkedIn</li>
+                <li className="flex items-center gap-2  cursor-pointer"><img src={twitter}/> Twitter</li>
+                <li className="flex items-center gap-2  cursor-pointer"><img src={instagram}/> Instagram</li>
+                <li className="flex items-center gap-2  cursor-pointer"><img src={facebook}/> Facebook</li>
+                <li className="flex items-center gap-2  cursor-pointer"><img src={pinterest}/> Pinterest</li>
             </ul>
         </div>
         <img src={footerIcon}/>
