@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
 
 const cards = [
   {
@@ -35,50 +35,45 @@ const cards = [
   },
 ];
 
-const StackedCards = () => {
-  const containerRef = useRef(null);
-  const [fixedIndex, setFixedIndex] = useState(null);
+const Programs = () => {
+  // const containerRef = useRef(null);
+  // const [fixedIndex, setFixedIndex] = useState(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (!containerRef.current) return;
 
-      const cards = Array.from(containerRef.current.children);
+  //     const cards = Array.from(containerRef.current.children);
 
-      let fixed = -1;
+  //     let fixed = -1;
 
-      cards.forEach((card, index) => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom > 0) {
-          fixed = index;
-        }
-      });
+  //     cards.forEach((card, index) => {
+  //       const rect = card.getBoundingClientRect();
+  //       if (rect.top <= 0 && rect.bottom > 0) {
+  //         fixed = index;
+  //       }
+  //     });
 
-      setFixedIndex(fixed);
-    };
+  //     setFixedIndex(fixed);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div>
-      {/* Content Before Cards */}
-      <div className="h-screen bg-gray-100 flex items-center justify-center">
-        <h1 className="text-3xl font-bold">Scroll Down to See the Cards</h1>
-      </div>
+      <h1 className="text-3xl font-bold">Our programs / products</h1>
 
       {/* Cards Section */}
-      <div ref={containerRef} className="relative h-auto">
-        {cards.map((card, index) => (
+      <div className=" h-auto">
+        {cards.map((card) => (
           <div
             key={card.id}
-            className={`w-[80%] mx-auto my-10 p-6 rounded-xl shadow-lg flex flex-col items-center ${
-              fixedIndex === index ? "fixed top-0 left-1/2 transform -translate-x-1/2 z-10" : ""
-            } ${card.color}`}
+            className={`w-[80%] mx-auto my-10 p-6 rounded-xl shadow-lg flex flex-col items-center ${card.color}`}
             style={{ height: "50vh" }}
           >
             <img
@@ -91,13 +86,8 @@ const StackedCards = () => {
           </div>
         ))}
       </div>
-
-      {/* Content After Cards */}
-      <div className="h-screen bg-gray-200 flex items-center justify-center">
-        <h1 className="text-3xl font-bold">End of Cards</h1>
-      </div>
     </div>
   );
 };
 
-export default StackedCards;
+export default Programs;

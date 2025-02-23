@@ -11,11 +11,14 @@ export const Route = createLazyFileRoute('/')({
 
 function RouteComponent() {
   return (
-    <div className='bg-black h-full w-full'>
+    <div className='bg-black h-full w-full lg:pl-40 lg:pr-60'
+    >
         <Hero />
         <Services />
         <Approach />
-        <FeaturedWorks />
+        <div className="relative lg:-mr-60">
+            <FeaturedWorks />
+        </div>
         <Programs />
     </div>
   )

@@ -75,7 +75,7 @@ function Services() {
       const [hoveredId, setHoveredId] = useState(null);
 
   return (
-    <div className="mt-[73px] lg:mt-60 px-5 lg:pl-36 lg:pr-44">
+    <div className="mt-[73px] lg:mt-60 px-5 ">
         <h3 className="text-white font-mont font-semibold text-2xl lg:text-[40px]">Our Services</h3>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-4 py-6 lg:pt-14 lg:gap-x-5 lg:gap-y-3">
         {boxContent.map((box) => (
@@ -83,7 +83,7 @@ function Services() {
             key={box.id}
             onMouseEnter={() => setHoveredId(box.id)}
             onMouseLeave={() => setHoveredId(null)}
-            className={`flex flex-col pl-3 pr-2 lg:pl-7 lg:pr-10 h-64 lg:h-[370px] text-white rounded-xl lg:rounded-2xl transition-transform duration-300 ${box.color} ${hoveredId && hoveredId !== box.id ? "opacity-50" : "opacity-100"}`}
+            className={`flex flex-col pl-3 pr-2 lg:pl-7 lg:pr-8 h-64 lg:h-[380px] text-white rounded-xl lg:rounded-2xl transition-transform duration-300 ${box.color} ${hoveredId && hoveredId !== box.id ? "opacity-50" : "opacity-100"}`}
           >
                 <img src={box.icon} alt={box.title} className="my-10 h-6 w-6 lg:h-11 lg:w-11 lg:mt-12 lg:mb-[75px]"/>
                 <div className={`text-black font-inter transition-transform duration-300 ${hoveredId === box.id ? "translate-y-[-25px]" : ""}`}>

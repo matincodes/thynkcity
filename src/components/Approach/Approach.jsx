@@ -28,7 +28,7 @@ function Approach() {
       
     const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
-    <div className="mt-16 lg:mt-48 lg:pl-36 lg:pr-44 px-5">
+    <div className="mt-16 lg:mt-48 px-5">
         <h3 className="text-white font-mont font-semibold text-2xl lg:text-[40px] lg:pb-10">Our approach</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-x-16 lg:gap-y-20 lg:py-8 py-6">
         {approachContent.map((content, index) => (
@@ -53,12 +53,12 @@ function Approach() {
                     <img src={ArrowUnderline} alt="Arrow Underline" className="w-5 h-5 lg:w-10 lg:h-10"/>
                 </div>
               {/* Description */}
-              <p className="text-xs lg:text-base lg:pr-20 lg:tracking-wide leading-5 font-inter text-white lg:py-2 py-1">{content.description}</p>
+              <p className="text-xs lg:text-base lg:pr-14 lg:tracking-wide leading-5 font-inter text-white lg:py-2 py-1">{content.description}</p>
             </div>
           </div>
         ))}
       </div>
-      <div className="text-white text-xl lg:text-[40px] font-mont font-medium leading-[31px] lg:leading-[57px]  lg:px-20 pt-6">
+      <div className="text-white text-xl lg:text-[40px] font-mont font-medium leading-[31px] lg:leading-[57px] pt-6">
         Choose Thynkcity for innovative, tailored solutions that are scalable. With our expert consulting, real-world and training, we deliver value and go above and beyond for you.
       </div>
     </div>

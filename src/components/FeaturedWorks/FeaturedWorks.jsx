@@ -67,7 +67,7 @@ function FeaturedWorks() {
   };
 
   return (
-    <div className="mt-16 lg:pl-36 lg:mt-32 pl-5">
+    <div className="mt-16 lg:mt-32 pl-5 !pr-0">
       <div className="flex justify-between items-center">
         <h3 className="text-white font-mont font-semibold text-2xl pb-8 lg:text-[40px] lg:pb-14">
           Featured Works
