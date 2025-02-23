@@ -16,17 +16,6 @@ export const Route = createLazyFileRoute("/")({
 
 function RouteComponent() {
   return (
-<<<<<<< HEAD
-    <div className='bg-black h-full w-full lg:pl-40 lg:pr-60'
-    >
-        <Hero />
-        <Services />
-        <Approach />
-        <div className="relative lg:-mr-60">
-            <FeaturedWorks />
-        </div>
-        <Programs />
-=======
     <div className="bg-black h-full  w-full lg:pb-44 pb-14">
       <Hero />
       <Services />
@@ -38,7 +27,6 @@ function RouteComponent() {
       <Blogs />
       <OurService />
       <Community />
->>>>>>> a5b2811222433be6704433e915584b07446947ca
     </div>
   );
 }
